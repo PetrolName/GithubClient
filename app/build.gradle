@@ -1,0 +1,124 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.cheng.github_client"
+
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["appVersionCode"]
+        versionName rootProject.ext.android["appVersionName"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+
+        final File propertiesFile = project.rootProject.file('local.properties')
+        if (propertiesFile != null && propertiesFile.exists()) {
+            properties.load(propertiesFile.newDataInputStream())
+            buildConfigField "String", "USER_ACCESS_TOKEN", properties.getProperty("USER_ACCESS_TOKEN")
+        } else {
+            buildConfigField "String", "USER_ACCESS_TOKEN", "\"TODO: set token at local.properties\""
+        }
+    }
+
+    //配置签名文件
+    signingConfigs {
+        debug {
+            storeFile file("$rootDir/githubclient.jks")
+            storePassword "githubclient123456"
+            keyAlias "githubclient"
+            keyPassword "githubclient123456"
+        }
+        release {
+            storeFile file("$rootDir/githubclient.jks")
+            storePassword "githubclient123456"
+            keyAlias "githubclient"
+            keyPassword "githubclient123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation rootProject.ext.dependencies["core-ktx"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["ext-junit"]
+    androidTestImplementation rootProject.ext.dependencies["espresso"]
+
+    implementation project(path: ':basic')
+
+    implementation rootProject.ext.dependencies["live-event-bus-x"]
+
+    //coil
+    implementation rootProject.ext.dependencies["coil"]
+    implementation rootProject.ext.dependencies["coil-gif"]
+    implementation rootProject.ext.dependencies["coil-svg"]
+    implementation rootProject.ext.dependencies["coil-video"]
+
+    //PersistentCookieJar
+    implementation rootProject.ext.dependencies["PersistentCookieJar"]
+
+    //moshi
+    implementation rootProject.ext.dependencies["moshi"]
+    implementation rootProject.ext.dependencies["moshi-kotlin"]
+
+    //gson
+    implementation rootProject.ext.dependencies["gson"]
+
+    //swiperefreshlayout
+    implementation rootProject.ext.dependencies["swiperefreshlayout"]
+
+    //circleimageview
+    implementation rootProject.ext.dependencies["circleimageview"]
+
+    //agentweb
+    implementation rootProject.ext.dependencies["agentweb"]
+
+    //rxpermissions
+    implementation rootProject.ext.dependencies["rxpermissions"]
+
+    //rxjava
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+
+    //Glide
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+
+    //mockito
+    testImplementation rootProject.ext.dependencies["mockito-core"]
+    testImplementation rootProject.ext.dependencies["mockito-inline"]
+
+}

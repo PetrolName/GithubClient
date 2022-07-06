@@ -1,0 +1,111 @@
+ext {
+
+    android = [
+               compileSdkVersion       : 30,
+               buildToolsVersion       : "30.0.3",
+               minSdkVersion           : 23,
+               targetSdkVersion        : 30,
+               appVersionCode          : 1,
+               appVersionName          : "1.0",
+    ]
+
+     version = [
+                   appcompatVersion        : "1.2.0",
+                   activityVersion         : "1.2.0",
+                   fragmentVersion         : "1.3.0",
+                   materialVersion         : "1.2.1",
+                   coreKtxVersion          : "1.3.1",
+                   constraintlayoutVersion : "2.1.3",
+                   lifecycleVersion        : "2.2.0",
+                   okHttpVersion           : "4.10.0",
+                   retrofitVersion         : "2.9.0",
+                   coilVersion             : "1.0.0",
+                   immersionbarVersion     : "3.2.2",
+                   moshiVersion            : "1.11.0",
+                   rxJavaVersion           : "2.0.1",
+                   glideVersion            : "4.13.2",
+                   mockitoVersion          : "2.13.0",
+     ]
+
+
+    dependencies = [
+                "appcompat"                : "androidx.appcompat:appcompat:${version["appcompatVersion"]}",
+                "activity-ktx"             : "androidx.activity:activity-ktx:${version["activityVersion"]}",
+                "fragment-ktx"             : "androidx.fragment:fragment-ktx:${version["fragmentVersion"]}",
+                "material"                 : "com.google.android.material:material:${version["materialVersion"]}",
+                "core-ktx"                 : "androidx.core:core-ktx:${version["coreKtxVersion"]}",
+                "constraintlayout"         : "androidx.constraintlayout:constraintlayout:${version["constraintlayoutVersion"]}",
+
+                //test
+                "junit"                    : "junit:junit:4.12",
+                "ext-junit"                : "androidx.test.ext:junit:1.1.2",
+                "espresso"                 : "com.android.support.test.espresso:espresso-core:3.3.0",
+
+                //协程
+                "kotlinx-coroutines-android"         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2",
+
+                //lifecycle
+                "lifecycle-process"         : "androidx.lifecycle:lifecycle-process:${version["lifecycleVersion"]}",
+                "lifecycle-runtime-ktx"     : "androidx.lifecycle:lifecycle-runtime-ktx:${version["lifecycleVersion"]}",
+                "lifecycle-viewmodel-ktx"   : "androidx.lifecycle:lifecycle-viewmodel-ktx:${version["lifecycleVersion"]}",
+                "lifecycle-livedata-ktx"    : "androidx.lifecycle:lifecycle-livedata-ktx:${version["lifecycleVersion"]}",
+
+                //okhttp
+                "okhttp"                    : "com.squareup.okhttp3:okhttp:${version["okHttpVersion"]}",
+                "logging-interceptor"       : "com.squareup.okhttp3:logging-interceptor:${version["okHttpVersion"]}",
+
+                //retrofit
+                "retrofit"                  : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+                "retrofit-converter-moshi"  : "com.squareup.retrofit2:converter-moshi:${version["retrofitVersion"]}",
+
+                //coil
+                "coil"                      : "io.coil-kt:coil:${version["coilVersion"]}",
+                "coil-gif"                  : "io.coil-kt:coil-gif:${version["coilVersion"]}",
+                "coil-svg"                  : "io.coil-kt:coil-svg:${version["coilVersion"]}",
+                "coil-video"                : "io.coil-kt:coil-video:${version["coilVersion"]}",
+
+                //BaseRecyclerViewAdapterHelper
+                "BaseRecyclerViewAdapterHelper"   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6",
+
+                "live-event-bus-x"          : "com.jeremyliao:live-event-bus-x:1.7.2",
+
+                //immersionbar
+                "immersionbar"              : "com.geyifeng.immersionbar:immersionbar:${version["immersionbarVersion"]}",
+                "immersionbar-ktx"          : "com.geyifeng.immersionbar:immersionbar-ktx:${version["immersionbarVersion"]}",
+
+                //PersistentCookieJar
+                "PersistentCookieJar"       : "com.github.franmontiel:PersistentCookieJar:v1.0.1",
+
+                //moshi
+                "moshi"                     : "com.squareup.moshi:moshi:${version["moshiVersion"]}",
+                "moshi-kotlin"              : "com.squareup.moshi:moshi-kotlin:${version["moshiVersion"]}",
+
+                //gson
+                "gson"                      : "com.google.code.gson:gson:2.8.0",
+
+                //swiperefreshlayout
+                "swiperefreshlayout"        : "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+
+                //circleimageview
+                "circleimageview"           : "de.hdodenhof:circleimageview:3.0.0",
+
+                //agentweb
+                "agentweb"                  : "com.just.agentweb:agentweb:4.1.4",
+
+                //rxpermissions
+                "rxpermissions"             : "com.github.tbruyelle:rxpermissions:0.10.2",
+
+                // RxJava
+                "rxjava"                    : "io.reactivex.rxjava2:rxjava:${version["rxJavaVersion"]}",
+                "rxandroid"                 : "io.reactivex.rxjava2:rxandroid:${version["rxJavaVersion"]}",
+
+                //Glide
+                "glide"                     : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+                "glide-compiler"            : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+
+                //mockito
+                "mockito-core"              : "org.mockito:mockito-core:${version["mockitoVersion"]}",
+                "mockito-inline"            : "org.mockito:mockito-inline:${version["mockitoVersion"]}",
+
+    ]
+}
