@@ -103,9 +103,9 @@ ext {
                 "glide"                     : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
                 "glide-compiler"            : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
 
-                //mockito
-                "mockito-core"              : "org.mockito:mockito-core:${version["mockitoVersion"]}",
-                "mockito-inline"            : "org.mockito:mockito-inline:${version["mockitoVersion"]}",
+//                //mockito
+//                "mockito-core"              : "org.mockito:mockito-core:${version["mockitoVersion"]}",
+//                "mockito-inline"            : "org.mockito:mockito-inline:${version["mockitoVersion"]}",
 
     ]
 }

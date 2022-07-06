@@ -38,7 +38,8 @@ class ProfileFragment : BaseVmFragment<ProfileViewModel>(){
             checkLogin { ActivityHelper.startActivity(ReposActivity::class.java) }
         }
         llMyFollowers.setOnClickListener {
-            ActivityHelper.startActivity(FollowersActivity::class.java)
+            checkLogin { ActivityHelper.startActivity(FollowersActivity::class.java) }
+
         }
         llFollowing.setOnClickListener {
             checkLogin { ActivityHelper.startActivity(FollowingActivity::class.java) }
