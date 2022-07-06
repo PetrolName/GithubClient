@@ -1,5 +1,3 @@
-# GithubClient
-基于MVVM架构集成Coroutine+JetPack组件库编写的Github客户端
 [![Platform][1]][2]
 
 [1]:https://img.shields.io/badge/platform-Android-blue.svg  
@@ -14,7 +12,6 @@
 
 #### MVVM框架
 ![](https://upload-images.jianshu.io/upload_images/18796234-2995d1670b257a64.png?imageMogr2/auto-orient/strip|imageView2/2/w/621/format/webp)
-
 
 ####设计模式
 单例模式，建造者模式，模板模式，责任链模式等多种设计模式。
