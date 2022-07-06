@@ -118,7 +118,7 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["glide-compiler"]
 
     //mockito
-//    testImplementation rootProject.ext.dependencies["mockito-core"]
-//    testImplementation rootProject.ext.dependencies["mockito-inline"]
+    testImplementation rootProject.ext.dependencies["mockito-core"]
+    testImplementation rootProject.ext.dependencies["mockito-inline"]
 
 }
