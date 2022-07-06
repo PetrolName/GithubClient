@@ -13,23 +13,23 @@
 #### MVVM框架
 ![](https://upload-images.jianshu.io/upload_images/18796234-2995d1670b257a64.png?imageMogr2/auto-orient/strip|imageView2/2/w/621/format/webp)
 
-####设计模式
+#### 设计模式
 单例模式，建造者模式，模板模式，责任链模式等多种设计模式。
 
-####权限
+#### 权限
 使用rxpermissions库动态申请应用程序需要存储的权限。
 
-####继承基类
+#### 继承基类
 BaseActivity/BaseFragment：如果不想用ViewModel，可以继承BaseActivity/BaseFragment，其中BaseFragment支持懒加载；
 BaseVmActivity/BaseVmFragment：如果想使用ViewModel，可以继承BaseVmActivity/BaseVmFragment；
 BaseViewModel：如果需要使用ViewModel，可以继承BaseViewModel，里面实现了协程，可直接方便调用；
 BaseLoadMoreAdapter：如果需要加载更多，可直接继承BaseLoadMoreAdapter，快速集成；
 
-####多状态页面
+#### 多状态页面
 请求数据失败时，会显示错误页面，可点击重试，提示文字可自行编辑；
 请求数据时空时，会显示数据空提示，提示文字可自行编辑；
 
-####网络请求（Retrofit+协程）
+#### 网络请求（Retrofit+协程）
 继承BaseViewModel就可以直接使用协程请求网络，方便快捷；
 
 ## 使用的库：
