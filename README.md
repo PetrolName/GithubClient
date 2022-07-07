@@ -46,9 +46,10 @@ BaseLoadMoreAdapter：如果需要加载更多，可直接继承BaseLoadMoreAdap
 - [PersistentCookieJar](https://github.com/franmontiel/PersistentCookieJar)
 - [Mockito](https://site.mockito.org/)
 
-## 使用
+## 使用(APK包在GithubClient/app/debug目录下)
 1、由于github方面的限制，所以开发者要去github上面注册OAuth Application，然后clone下来，如：
-git clone https://github.com/PetrolName/GithubClient
+
+$ git clone https://github.com/PetrolName/GithubClient
 
 2、如不知怎么注册的，可以参考下面[此链接](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) ，按步骤获取Access Token；
 
